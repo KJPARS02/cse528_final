@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject platformPrefab;
 
-    public int platformCount = 250;
+    public int platformCount = 350;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < platformCount; i++)
         {
-            spawnPosition.y += Random.Range(.5f, 2f);
+            spawnPosition.y += Random.Range(1f, 3f);
             spawnPosition.x = Random.Range(-8f, 8f);
             Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
         }
