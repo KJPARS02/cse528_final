@@ -2,21 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinGenerator : MonoBehaviour
+public class EnemyGen : MonoBehaviour
 {
-    public GameObject coinPrefab;
+    public GameObject enemy;
 
-    public int coinCount = 350;
+    public int enemycount = 350;
     // Start is called before the first frame update
     void Start()
     {
         Vector3 spawnPosition = new Vector3();
 
-        for (int i = 0; i < coinCount; i++)
+        for (int i = 0; i < enemycount ; i++)
         {
-            spawnPosition.y += Random.Range(1f, 3f);
+            spawnPosition.y += Random.Range(10f, 20f);
             spawnPosition.x = Random.Range(-8f, 8f);
-            Instantiate(coinPrefab, spawnPosition, Quaternion.identity);
+            Instantiate(enemy, spawnPosition, Quaternion.identity);
         }
     }
 
